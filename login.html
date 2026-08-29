@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Log in or register — AssetSphere</title>
+<meta name="description" content="Sign in to your organisation's asset ledger, or set up AssetSphere for your team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,480;0,9..144,560;1,9..144,480;1,9..144,560&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body" data-scene="hero">
+
+  <div class="bg-field" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+  </div>
+
+  <div class="auth-shell">
+
+    <!-- brand / motion panel -->
+    <div class="auth-brand">
+      <a href="index.html" class="wordmark">AssetSphere</a>
+
+      <div class="auth-stage" aria-hidden="true">
+        <div class="shape circle a-s1"><span class="tag">Tracking</span><span class="num">Live</span></div>
+        <div class="shape square a-s2"><span class="tag">Compliance</span><span class="num">Audit-ready</span></div>
+        <div class="shape circle a-s3"><span class="tag">Reporting</span><span class="num">Synced</span></div>
+      </div>
+
+      <div class="auth-brand-copy">
+        <div class="eyebrow">Your organisation's ledger</div>
+        <h1>Every asset, <em>accounted</em> for.</h1>
+        <p>One login for your whole organisation — teams, departments and subsidiaries all draw from the same ledger, with the access each person needs.</p>
+      </div>
+
+      <div class="auth-foot-note">SOC 2 Type II · ISO 27001 · Data encrypted at rest and in transit</div>
+    </div>
+
+    <!-- form panel -->
+    <div class="auth-form-side">
+      <div class="auth-form-wrap">
+
+        <div class="auth-tabs">
+          <button type="button" data-pane="login" class="is-active">Log in</button>
+          <button type="button" data-pane="register">Register</button>
+        </div>
+
+        <div class="plan-chip" data-plan-chip hidden>
+          Selected plan: <strong data-plan-name>Business</strong>
+          <a href="pricing.html">Change</a>
+        </div>
+
+        <h2 data-auth-heading>Welcome back</h2>
+        <p class="sub" data-auth-sub>Sign in to your organisation's asset ledger.</p>
+
+        <!-- LOGIN -->
+        <div class="pane" data-pane="login">
+          <form data-auth-form>
+            <div class="field">
+              <label for="login-email">Work email</label>
+              <input id="login-email" type="email" placeholder="you@company.com" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <input id="login-password" type="password" placeholder="••••••••" required autocomplete="current-password">
+            </div>
+            <div class="form-row-between">
+              <label class="checkline"><input type="checkbox">Keep me signed in</label>
+              <a href="#" class="link-muted">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block btn-lg">Log in</button>
+          </form>
+
+          <div class="divider">Or continue with</div>
+          <div class="sso-row">
+            <button type="button" class="sso-btn">Google</button>
+            <button type="button" class="sso-btn">Microsoft</button>
+          </div>
+
+          <p class="auth-switch">Don't have an account? <button type="button" data-switch-to="register">Register</button></p>
+        </div>
+
+        <!-- REGISTER -->
+        <div class="pane" data-pane="register">
+          <form data-auth-form>
+            <div class="field-row">
+              <div class="field">
+                <label for="reg-first">First name</label>
+                <input id="reg-first" type="text" placeholder="Jordan" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="reg-last">Last name</label>
+                <input id="reg-last" type="text" placeholder="Reyes" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="field">
+              <label for="reg-org">Organisation name</label>
+              <input id="reg-org" type="text" placeholder="Acme Holdings, or a subsidiary name" required autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="reg-email">Work email</label>
+              <input id="reg-email" type="email" placeholder="you@company.com" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="reg-size">Organisation size</label>
+              <select id="reg-size" required>
+                <option value="" disabled selected>Select team size</option>
+                <option>1–10 people</option>
+                <option>11–50 people</option>
+                <option>51–250 people</option>
+                <option>251–1,000 people</option>
+                <option>1,000+ / multiple subsidiaries</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="reg-password">Password</label>
+              <input id="reg-password" type="password" placeholder="At least 10 characters" required autocomplete="new-password" minlength="10">
+              <div class="field-hint">Use 10+ characters with a mix of letters and numbers.</div>
+            </div>
+            <div class="form-row-between">
+              <label class="checkline"><input type="checkbox" required>I agree to the Terms &amp; Privacy Policy</label>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block btn-lg">Create account</button>
+          </form>
+
+          <p class="auth-switch">Already have an account? <button type="button" data-switch-to="login">Log in</button></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
